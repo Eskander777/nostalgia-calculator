@@ -94,7 +94,11 @@
         calcResult = numToCalcOne * numToCalcTwo;
         break;
       case '/':
-        calcResult = numToCalcOne / numToCalcTwo;
+        if (numToCalcTwo == 0) {
+          calcResult = 'Zero div err';
+        } else {
+          calcResult = numToCalcOne / numToCalcTwo;
+        }
         break;
     }
     addEntryToLog(numToCalcOne, numToCalcTwo, operatorToCalc, calcResult);
